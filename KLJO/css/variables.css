@@ -1,0 +1,21 @@
+:root {
+    /* Color */
+    --primary-color: #7bc144;
+    --secondary-color: #edcb35;
+    --text-color: #242424;
+    --gray: #444545;
+    --white: #fff;
+
+    /* Font */
+    --heading1: 5rem;
+    --heading2: 4rem;
+    --heading3: 1.7rem;
+
+    --text: 1.2rem;
+
+    /* animation */
+    --transition-time: .1s;
+
+    /* spacing */
+    --padding-bottom: 8rem;
+  }
