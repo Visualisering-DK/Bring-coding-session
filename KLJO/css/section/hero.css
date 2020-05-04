@@ -1,0 +1,20 @@
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(../../../img/hero.jpg) center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h2 {
+    text-transform: uppercase;
+    font-size: var(--heading1);
+    margin: 0 1rem;
+}
+
+.hero p {
+    font-size: var(--heading3);
+    margin: 0 1rem 2rem;
+}
