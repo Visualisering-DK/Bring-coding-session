@@ -1,0 +1,117 @@
+
+@import 'normalize.css';
+@import 'variables.css';
+
+@import 'section/header.css';
+@import 'section/hero.css';
+@import 'section/services.css';
+
+@import 'component/button.css';
+
+
+html {
+  font-family: 'Mukta', sans-serif;
+  font-size: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: var(--heading2);
+}
+
+h3 {
+  font-size: var(--heading3);
+}
+
+svg {
+  fill: var(--gray);
+}
+
+/* helpers */
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.top-arrow {
+  margin-top: -60px;
+  padding-top: 80px;
+  clip-path: polygon(50% 60px, calc(50% - 60px) 0px, 0 0, 0 100%, 100% 100%, 100% 0, calc(50% + 60px) 0)
+}
+
+.bottom-arrow {
+  clip-path: polygon(0 0, 0 93%, 47% 93%, 50% 100%, 53% 93%, 100% 93%, 100% 0);
+}
+
+.test-arrow::after{
+  content: '';
+  display: block;
+  height: 60px; 
+  width: 100px;
+  background: green;
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  left: calc(50% - 50px);
+  margin-top: 75px;
+}
+
+.test-arrow::before {
+  content: '';
+  height: 60px;
+  width: 100px;
+  display: block;
+  background: black;
+}
+
+/* components */
+.social-icons {
+
+}
+
+/* sections */
+.services, .about, .e-commerce, .reciever-service, .customer-service, .jobs {
+  padding-bottom: var(--padding-bottom);
+}
+.about {
+  text-align: center;
+  background: var(--secondary-color);
+}
+
+.e-commerce {
+  text-align: center;
+  color: var(--white);
+  background: var(--primary-color);
+}
+
+.e-commerce svg {
+  fill: var(--white)
+}
+
+.e-commerce p {
+  font-size: var(--heading3);
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 65ch;
+}
+
+.reciever-service {
+  text-align: center;
+  background: var(--white);
+}
+
+.customer-service {
+
+}
+
+.jobs {
+
+}
+
+.contact {
+
+}
