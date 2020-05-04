@@ -1,0 +1,28 @@
+.button {
+    display: inline-block;
+    padding: .8rem 2rem;
+    text-decoration: none;
+    font-size: var(--text);
+    transition: all var(--transition-time);
+    border-radius: 5px;
+}
+
+.button--green {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+.button--green:hover {
+    color: black;
+    background-color: var(--white);
+}
+
+.button--dark {
+    color: var(--white);
+    background-color: var(--text-color);
+}
+
+.button--dark:hover {
+    /* color: var(--text-color); */
+    background-color: var(--primary-color);
+}
