@@ -32,3 +32,33 @@ heroH2ArrayNodes.forEach((letter) => {
 //   letter.style.animationName = "heroH2";
 //   letter.style.animationDelay = 0.1 * index + "s";
 // });
+
+// Håndtering af "næste sektion-knap"
+// For hver sektion, skab og indsæt knap
+const sections = document.querySelectorAll("section");
+sections.forEach((section, index) => {
+  const nextSection = document.createElement("span");
+  nextSection.classList.add("nextSection");
+  const arrow = document.createElement("img");
+  arrow.src =
+    "http://www.myiconfinder.com/uploads/iconsets/20-20-7e81c2f3697b91ee17fe6ed6348c232a-Arrow.png";
+  // Alle pile på nær den sidste skal vende ned (roteres 90 deg)
+  if (index !== sections.length - 1) {
+    arrow.classList.add("downArrow");
+  } else {
+    arrow.classList.add("upArrow");
+  }
+
+  nextSection.appendChild(arrow);
+  // Nu er pil lavet og indsat, nu skal der tilføjes eventlistener:
+  nextSection.addEventListener("click", () => {
+    // Den sidste pil skal scrolle til top-section
+    if (index === sections.length - 1) {
+      sections[0].scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Alle andre pile skal til næste section
+      sections[index + 1].scrollIntoView({ behavior: "smooth" });
+    }
+  });
+  section.appendChild(nextSection);
+});
